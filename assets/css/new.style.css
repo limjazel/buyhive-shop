@@ -1,0 +1,300 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Inter', sans-serif;
+}
+
+/* ======= CONTENTS ======= */
+/* 
+1. Navbar
+2. Banner
+3. How it Works
+4. Product List
+5. Footer
+6. Floating Cart Button
+*/
+
+/* TYPEFACE / FONT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* BUTTON CSS OVERRIDE */
+
+.btn-primary {
+	background-color: #2392B3;
+	border: 1px solid #2392B3;
+}
+
+.btn-primary:hover {
+	background-color: rgb(15, 101, 128);
+	border: 1px solid rgb(15, 101, 128);
+}
+
+.btn-outline-primary {
+	color: #2392B3;
+	background-color: transparent;
+	background-image: none;
+	border-color: #2392B3;
+}
+
+.btn-outline-primary:hover {
+	color: #fff;
+	background-color: #2392B3;
+	border-color: #2392B3;
+}
+
+
+/* ======== 1. NAVBAR ======== */
+.navbar {
+	padding: 1rem;
+	font-size: 0.9rem;
+}
+
+.navbar .navbar-brand img {
+	height: 40px;
+	max-height: 50px;
+}
+
+.navbar .btn {
+	font-size: 0.9rem;
+}
+
+/* ======== 2. BANNER ======== */
+.banner {
+	min-height: 500px;
+	height: 100%;
+	/* background: #d9deee; */
+	background: url('../img/bg/banner-image-3.jpg') no-repeat;
+	background-position: right;
+	background-size: cover;
+}
+
+.banner-overlay {
+	padding: 4rem 0rem;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.banner-title-text {
+	font-size: 3.4rem;
+	font-weight: 800;
+	line-height: 4rem;
+}
+
+.banner-text-shadow {
+	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ======== 3. HOW IT WORKS ======== */
+.how-it-works {
+	padding: 4rem 0rem;
+	background: #f8f9ff;
+}
+
+.how-item-label {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.how-item-icon {
+	width: auto;
+	height: 100px;
+	margin-bottom: 1.5rem;
+}
+
+
+/* ======== 4. PRODUCTS ======== */
+.products {
+	padding: 3rem 0;
+}
+
+.products-title-text {
+	font-size: 2.8rem;
+	font-weight: 800;
+}
+
+.product-list {
+	list-style: none;
+	padding: 0;
+}
+
+.products .search-input {
+	border-radius: .25rem;
+	width: 100%;
+}
+
+.products .sort-btn {
+	border-radius: .25rem;
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
+.products .sort-btn i {
+	margin-left: auto;
+}
+
+.divider {
+	margin: 2rem 0;
+	width: 100%;
+	height: 1px;
+	background: #d9d7df;
+}
+
+.product-wrapper {
+	max-width: 1020px;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.product-list {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.product-list .product-preview {
+	grid-column: span 12;
+	-webkit-transition: -webkit-transform .2s ease-in-out;
+	transition: -webkit-transform .2s ease-in-out;
+	transition: transform .2s ease-in-out;
+	transition: transform .2s ease-in-out,
+		-webkit-transform .2s ease-in-out;
+}
+
+.product-list .product-preview:hover {
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12),
+		0 2px 4px 0 rgba(0, 0, 0, .08);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12),
+		0 2px 4px 0 rgba(0, 0, 0, .08);
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+	cursor: pointer;
+}
+
+.product-list .product-preview img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+	padding: 1rem;
+}
+
+.product-description {
+	height: auto;
+	background: #ffffff;
+	width: 100%;
+	padding: 1.2rem 1rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.product-description .product-name {
+	font-size: 1.3rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.product-description .product-price {
+	font-size: 1rem;
+	color: rgb(36, 126, 206);
+	padding-top: 0.3rem;
+}
+
+@media screen and (min-width: 320px) {
+	.products-title-text {
+		font-size: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 642px) {
+	.products-title-text {
+		margin-bottom: 0;
+	}
+
+	.product-list .product-preview {
+		grid-column: span 4;
+	}
+
+	.products .sort-btn {
+		margin-left: 0.5rem;
+		width: auto;
+		margin-top: 0;
+	}
+
+	.products .sort-btn i {
+		margin-left: 0.5rem;
+	}
+
+	.products .search-input {
+		width: auto;
+	}
+}
+
+/* ======== 5. FOOTER ======== */
+.page-footer {
+	background: #f9f9fc;
+}
+
+.page-footer .footer-about-text {
+	font-size: 0.8rem;
+	color: #848897;
+}
+
+.page-footer img {
+	height: 40px;
+	margin-bottom: 20px;
+}
+
+.page-footer .footer-content-row {
+	padding: 2rem 0;
+}
+
+.page-footer .footer-copyright {
+	background: #c8cbd3;
+	color: #66666d;
+	font-size: 0.8rem;
+}
+
+.page-footer .footer-label {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.page-footer .link-list {
+	font-size: 0.9rem;
+}
+
+.page-footer .link-list li {
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+}
+
+.page-footer .link-list a {
+	color: #2392B3;
+}
+
+/* ======== 6. FLOATING CART BUTTON ======== */
+.float-cart-btn {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	bottom: 40px;
+	right: 30px;
+	background-color: #2392B3;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 0px 2px 8px rgba(153, 153, 153, 0.6);
+}
+
+.float-cart-icon {
+	margin-top: 22px;
+}
